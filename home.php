@@ -25,7 +25,7 @@ PoC to use Stored XSS to gather hidden endpoints and urls:<br>
 2) check /collection.php to see all links found so far<br>
 3) "Login" by clicking the login link to get to the "admin" area<br>
 4) recheck collection.php to see "hidden" admin link<br>
-<textarea style="width:600px;height: 150px;"><script src="exploit.js"></script></textarea>
+<textarea style="width:600px;height: 150px;"><script src="exploit/exploit.js"></script></textarea>
 <form method="post" action="home.php">
     <input name="content" type="text">
     <button type="submit">Submit</button>
