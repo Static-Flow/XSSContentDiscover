@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Tanner
- * Date: 12/10/2018
- * Time: 8:44 PM
- */
+//This is how Myspace does session management too
 setcookie("admin", NULL, 0, "/");
 header('Location: /home.php');
 die();

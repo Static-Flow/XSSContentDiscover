@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Tanner
- * Date: 12/10/2018
- * Time: 8:42 PM
- */
-
+//And just like that you're in
 setcookie("admin","true");
 
 header('Location: /home.php');

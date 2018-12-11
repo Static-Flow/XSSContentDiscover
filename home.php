@@ -2,18 +2,22 @@
 <?php
 if (isset($_COOKIE["admin"])) {
     echo '<a href="/secretAdmin.php">Admin</a><br>';
+    //our super secret hidden admin page
 }
+//ACME authentication scheme
 if (!isset($_COOKIE["admin"])) {
     echo "<a href=/login.php>Login</a><br>";
 } else {
     echo "<a href=/logout.php>Logout</a><br>";
 }
 
+//simplest way to mock database entries
 if (isset($_POST['content'])) {
-    file_put_contents("submissions", $_POST["content"], FILE_APPEND | LOCK_EX);//I've got a bad feeling about this
+    file_put_contents("submissions", $_POST["content"], FILE_APPEND | LOCK_EX);
     header('Location: /home.php');
     die();
 }
+//did you know you can include text files like this? PHP is wild
 include 'submissions';
 ?>
 PoC to use Stored XSS to gather hidden endpoints and urls:<br>
